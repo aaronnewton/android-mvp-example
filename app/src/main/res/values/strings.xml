@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AA MVP Example</string>
+    <string name="login_screen">Login Screen</string>
+    <string name="email_input_hint">Email</string>
+    <string name="password_input_hint">Password</string>
+    <string name="login_button">Login</string>
+    <string name="generic_error_reason">Generic Error</string>
+</resources>
