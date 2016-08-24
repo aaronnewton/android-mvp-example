@@ -4,5 +4,12 @@
     <string name="email_input_hint">Email</string>
     <string name="password_input_hint">Password</string>
     <string name="login_button">Login</string>
+
+
     <string name="generic_error_reason">Generic Error</string>
+    <string name="network_error_reason">Network error occurred</string>
+    <string name="email_already_used_error_reason">This email address is already in use</string>
+    <string name="invalid_email_error_reason">This email address is invalid</string>
+    <string name="invalid_password_error_reason">This password does not contain the correct characters</string>
+
 </resources>

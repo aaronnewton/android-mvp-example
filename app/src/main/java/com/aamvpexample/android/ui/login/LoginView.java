@@ -6,7 +6,7 @@ import com.aamvpexample.android.ui.WaitingBehaviour;
 
 public interface LoginView extends BaseView, WaitingBehaviour, ShowErrorBehaviour {
 
-    void loginSucceful();
+    void loginSuccessful();
 
     void displayEmailErrorMessage();
     

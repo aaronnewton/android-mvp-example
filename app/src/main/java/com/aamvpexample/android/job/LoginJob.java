@@ -2,6 +2,7 @@ package com.aamvpexample.android.job;
 
 import android.support.annotation.NonNull;
 
+import com.aamvpexample.android.R;
 import com.birbit.android.jobqueue.Params;
 import com.birbit.android.jobqueue.RetryConstraint;
 
@@ -27,6 +28,7 @@ public class LoginJob extends BaseJob {
     public void onRun() throws Throwable {
         //TODO Validate input data, if valid continue else throw LoginException
 
+
         //TODO Execute api request
         //TODO check it request isSuccessful
 
@@ -48,6 +50,32 @@ public class LoginJob extends BaseJob {
         public FinishedEvent(boolean success) {
             super(success);
         }
+    }
 
+    public enum LoginFailedReason {
+        NETWORK_ERROR(R.string.network_error_reason),
+        EMAIL_ALREADY_USED(R.string.email_already_used_error_reason),
+        EMAIL_ERROR(R.string.invalid_email_error_reason),
+        PASSWORD_ERROR(R.string.invalid_password_error_reason);
+
+        private int mResId;
+
+        LoginFailedReason(int resId) {
+            mResId = resId;
+        }
+
+        public int getStringResource() {
+            return mResId;
+        }
+    }
+
+    public class LoginException extends Exception {
+        public LoginException(String s) {
+            super(s);
+        }
+
+        public LoginException(Throwable throwable) {
+            super(throwable);
+        }
     }
 }
